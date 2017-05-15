@@ -176,6 +176,8 @@ namespace {
 - (IBAction)takeStart:(UIButton *)sender {
     LyEAGLViewController *arViewController = [[LyEAGLViewController alloc] init];
     
+    NSLog(@"arViewController: %@", arViewController);
+    
     [self performSelector:@selector(start:) withObject:arViewController afterDelay:0.05];
 }
 
@@ -209,10 +211,7 @@ namespace {
         animationGroup.repeatCount = HUGE_VALF;
         animationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         CFTimeInterval beginTime = CircleAnimationDuration / CircleCount * (CFTimeInterval)i;
-//        if (arrIvCircle.count - 1 == i)
-//        {
-//            beginTime -= CircleAnimationDuration / CircleCount * (CFTimeInterval)i / (CFTimeInterval)(arrIvCircle.count / 3);
-//        }
+        
         animationGroup.beginTime = beginTime;
         [ivCircle.layer addAnimation:animationGroup forKey:CircleScaleAnimationKey];
     }

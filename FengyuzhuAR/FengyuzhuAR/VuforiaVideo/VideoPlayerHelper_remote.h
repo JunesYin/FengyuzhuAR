@@ -94,9 +94,11 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
         PLAYER_TYPE_ON_TEXTURE,
         PLAYER_TYPE_NATIVE
     } playerType;
+    
+    
 }
 
-
+// Add by Junes
 @property (strong, nonatomic) AVPlayerItemVideoOutput *videoOutput;
 
 

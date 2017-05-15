@@ -96,10 +96,6 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
     } playerType;
 }
 
-
-@property (strong, nonatomic) AVPlayerItemVideoOutput *videoOutput;
-
-
 - (id)initWithRootViewController:(LyEAGLViewController *) rootViewController;
 - (BOOL)load:(NSString*)filename playImmediately:(BOOL)playOnTextureImmediately fromPosition:(float)seekPosition;
 - (BOOL)unload;

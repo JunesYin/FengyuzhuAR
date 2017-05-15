@@ -42,7 +42,6 @@
 		859D3B7A1EC3FCC30062EC62 /* Simple.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6E1EC3FCC30062EC62 /* Simple.vertsh */; };
 		859D3B7B1EC3FCC30062EC62 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B701EC3FCC30062EC62 /* Texture.mm */; };
 		859D3B811EC3FCEC0062EC62 /* SampleMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */; };
-		859D3B821EC3FCEC0062EC62 /* VideoPlayerHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B801EC3FCEC0062EC62 /* VideoPlayerHelper.mm */; };
 		859D3B881EC3FCF20062EC62 /* LyEAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B851EC3FCF20062EC62 /* LyEAGLView.mm */; };
 		859D3B891EC3FCF20062EC62 /* LyEAGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B871EC3FCF20062EC62 /* LyEAGLViewController.mm */; };
 		859D3B8D1EC3FD2D0062EC62 /* girl.dat in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8B1EC3FD2D0062EC62 /* girl.dat */; };
@@ -51,6 +50,7 @@
 		859D3BFA1EC42C1C0062EC62 /* SimpleLove.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */; };
 		85B160611EC5837200F95883 /* LyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B160601EC5837200F95883 /* LyExtension.m */; };
 		85B1FC401EC2F7E300EF31CE /* DAE.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */; };
+		85EDB55D1EC996B0008F4F55 /* VideoPlayerHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,8 +102,6 @@
 		859D3B701EC3FCC30062EC62 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
 		859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleMath.cpp; sourceTree = "<group>"; };
 		859D3B7E1EC3FCEC0062EC62 /* SampleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleMath.h; sourceTree = "<group>"; };
-		859D3B7F1EC3FCEC0062EC62 /* VideoPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerHelper.h; sourceTree = "<group>"; };
-		859D3B801EC3FCEC0062EC62 /* VideoPlayerHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayerHelper.mm; sourceTree = "<group>"; };
 		859D3B841EC3FCF20062EC62 /* LyEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLView.h; sourceTree = "<group>"; };
 		859D3B851EC3FCF20062EC62 /* LyEAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LyEAGLView.mm; sourceTree = "<group>"; };
 		859D3B861EC3FCF20062EC62 /* LyEAGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLViewController.h; sourceTree = "<group>"; };
@@ -112,10 +110,13 @@
 		859D3B8C1EC3FD2D0062EC62 /* girl.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = girl.xml; sourceTree = "<group>"; };
 		859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLove.mp4; sourceTree = "<group>"; };
 		859D3BF81EC4127F0062EC62 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		85AA88D91EC9592F00C67B3A /* LySingleInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LySingleInstance.h; sourceTree = "<group>"; };
 		85B1605F1EC5837200F95883 /* LyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyExtension.h; sourceTree = "<group>"; };
 		85B160601EC5837200F95883 /* LyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyExtension.m; sourceTree = "<group>"; };
 		85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = DAE.scnassets; sourceTree = "<group>"; };
 		85C150D61EC30FDC003BBE06 /* FengyuzhuAR-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FengyuzhuAR-PrefixHeader.pch"; sourceTree = "<group>"; };
+		85EDB55B1EC996B0008F4F55 /* VideoPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerHelper.h; sourceTree = "<group>"; };
+		85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayerHelper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +225,7 @@
 				859D3B351EC3FC2E0062EC62 /* LyUtil.m */,
 				85B1605F1EC5837200F95883 /* LyExtension.h */,
 				85B160601EC5837200F95883 /* LyExtension.m */,
+				85AA88D91EC9592F00C67B3A /* LySingleInstance.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -266,8 +268,8 @@
 			children = (
 				859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */,
 				859D3B7E1EC3FCEC0062EC62 /* SampleMath.h */,
-				859D3B7F1EC3FCEC0062EC62 /* VideoPlayerHelper.h */,
-				859D3B801EC3FCEC0062EC62 /* VideoPlayerHelper.mm */,
+				85EDB55B1EC996B0008F4F55 /* VideoPlayerHelper.h */,
+				85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */,
 			);
 			path = VuforiaVideo;
 			sourceTree = "<group>";
@@ -377,10 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				850D23831EC2BF4D0054EE94 /* ViewController.mm in Sources */,
-				859D3B821EC3FCEC0062EC62 /* VideoPlayerHelper.mm in Sources */,
 				859D3B721EC3FCC30062EC62 /* SampleApplicationShaderUtils.m in Sources */,
 				859D3B731EC3FCC30062EC62 /* SampleApplicationUtils.cpp in Sources */,
 				850D22EF1EC2B3120054EE94 /* AppDelegate.m in Sources */,
+				85EDB55D1EC996B0008F4F55 /* VideoPlayerHelper.mm in Sources */,
 				859D3B361EC3FC2E0062EC62 /* LyUtil.m in Sources */,
 				859D3B811EC3FCEC0062EC62 /* SampleMath.cpp in Sources */,
 				850D22EC1EC2B3120054EE94 /* main.m in Sources */,

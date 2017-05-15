@@ -20,7 +20,7 @@
 
 static const int jNumVideoTargets = 2;
 
-
+@class LyEAGLViewController;
 
 @interface LyEAGLView : UIView <UIGLViewProtocol, SampleGLResourceHandler, SampleAppRendererControl>
 {
@@ -28,7 +28,7 @@ static const int jNumVideoTargets = 2;
     VideoPlayerHelper *videoPlayerHelper[jNumVideoTargets];
     float videoPlaybackTime[jNumVideoTargets];
     
-    LyEAGLViewController *videoPlaybackViewController;
+//    LyEAGLViewController *videoPlaybackViewController;
     
     // 追踪物丢失目标后停止视频播放的计时器
     // Note: 被两个线程读写，但永远不会同时发生
@@ -54,7 +54,6 @@ static const int jNumVideoTargets = 2;
     GLint texSampler2DHandle;
     
     // 用于绘制的纹理
-//    Texture *augmentationTexure[jNumAugmentationTextures];
     SampleAppRenderer *sampleAppRenderer;
     
     
@@ -64,6 +63,7 @@ static const int jNumVideoTargets = 2;
 }
 
 
+@property (weak, nonatomic) LyEAGLViewController *videoPlaybackViewController;;
 @property (weak, nonatomic) SampleApplicationSession *vapp;
 
 @property (strong, nonatomic) SCNRenderer *renderer;

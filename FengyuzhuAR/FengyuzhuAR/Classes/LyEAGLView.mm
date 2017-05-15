@@ -39,8 +39,10 @@ namespace {
     
     NSString *videoNames[jNumVideoTargets] =
     {
-        @"SimpleLove.mp4",
-        @"https://www.gendew.com/movie/photo_ChenJie.mp4"
+//        @"SimpleLove.mp4",
+//        @"SimpleLove.mp4",
+        @"https://www.gendew.com/movie/photo_ChenJie.mp4",
+        @"https://www.gendew.com/movie/photo_JiangLei.mp4",
     };
     
     
@@ -49,7 +51,7 @@ namespace {
         @"huotuo",
         @"yu"
     };
-    
+
     
     const NSTimeInterval TRACKING_LOST_TIMEOUT = 0.01f;
     
@@ -134,7 +136,7 @@ namespace {
     {
         _vapp = vapp;
         
-        videoPlaybackViewController = rootViewController;
+        _videoPlaybackViewController = rootViewController;
         
         // 启用视网膜模式(retina)
         if ([_vapp isRetinaDisplay])
@@ -217,23 +219,40 @@ namespace {
 
 - (void)prepare
 {
-    // 遍历每个目标，撞见VideoPlayerHelper对象，并将目标唯独置零
+//    // 遍历每个目标，撞见VideoPlayerHelper对象，并将目标唯独置零
+//    for (int i = 0; i < jNumVideoTargets; ++i)
+//    {
+//        videoPlayerHelper[i] = [[VideoPlayerHelper alloc] initWithRootViewController:videoPlaybackViewController];
+//        videoData[i].targetPositiveDimensions.data[0] = 0.0;
+//        videoData[i].targetPositiveDimensions.data[1] = 0.0;
+//    }
+//    
+//    // 应用首次运行的当前位置（开始位置）开始播放视频
+//    for (int i = 0; i < jNumVideoTargets; ++i)
+//    {
+//        videoPlaybackTime[i] = VIDEO_PLAYBACK_CURRENT_POSITION;
+//    }
+//    
+//    // 遍历每个视频增强物目标
+//    for (int i = 0; i < jNumVideoTargets; ++i)
+//    {
+//        // 为播放读取本地文件，如果应用进入后台时正在播放则唤醒播放
+//        if (![videoPlayerHelper[i] load:videoNames[i] playImmediately:YES fromPosition:videoPlaybackTime[i]])
+//        {
+//            NSLog(@"Fialed to load media");
+//        }
+//    }
+    
     for (int i = 0; i < jNumVideoTargets; ++i)
     {
-        videoPlayerHelper[i] = [[VideoPlayerHelper alloc] initWithRootViewController:videoPlaybackViewController];
+        // 遍历每个目标，撞见VideoPlayerHelper对象，并将目标唯独置零
+        videoPlayerHelper[i] = [[VideoPlayerHelper alloc] initWithRootViewController:_videoPlaybackViewController];
         videoData[i].targetPositiveDimensions.data[0] = 0.0;
         videoData[i].targetPositiveDimensions.data[1] = 0.0;
-    }
-    
-    // 应用首次运行的当前位置（开始位置）开始播放视频
-    for (int i = 0; i < jNumVideoTargets; ++i)
-    {
+        
+        // 应用首次运行的当前位置（开始位置）开始播放视频
         videoPlaybackTime[i] = VIDEO_PLAYBACK_CURRENT_POSITION;
-    }
-    
-    // 遍历每个视频增强物目标
-    for (int i = 0; i < jNumVideoTargets; ++i)
-    {
+        
         // 为播放读取本地文件，如果应用进入后台时正在播放则唤醒播放
         if (![videoPlayerHelper[i] load:videoNames[i] playImmediately:YES fromPosition:videoPlaybackTime[i]])
         {
@@ -442,7 +461,7 @@ namespace {
         videoData[i].isActive = NO;
     }
     
-    [self setProjectionMatrix:projectionMatrix];
+//    [self setProjectionMatrix:projectionMatrix];
     
     //
     for (int i = 0; i < numActiveTrackables; ++i)
@@ -504,7 +523,7 @@ namespace {
                     [self performSelectorOnMainThread:@selector(terminateTrackingLostTimer) withObject:nil waitUntilDone:YES];
                 }
                 
-                // 将最新的解码视频数据上海窜到OpenGL并获取视频纹理ID
+                // 将最新的解码视频数据上传到OpenGL并获取视频纹理ID
                 GLuint videoTexID = [videoPlayerHelper[playerIndex] updateVideoData];
                 
                 if (0 == videoTextureID[playerIndex])
@@ -551,17 +570,17 @@ namespace {
             Vuforia::Matrix44F modelViewMatrixVideo = Vuforia::Tool::convertPose2GLMatrix(trackablePose);
             Vuforia::Matrix44F modelViewProjectionVideo;
             
-            // 保持宽度
-            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[0],
-                                                    videoData[playerIndex].targetPositiveDimensions.data[0] * aspectRatio,
-                                                    videoData[playerIndex].targetPositiveDimensions.data[0],
-                                                    &modelViewMatrixVideo.data[0]);
-            
-            // 保持高度
-//            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[1] / aspectRatio,
-//                                                    videoData[playerIndex].targetPositiveDimensions.data[1],
+//            // 保持宽度
+//            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[0],
+//                                                    videoData[playerIndex].targetPositiveDimensions.data[0] * aspectRatio,
 //                                                    videoData[playerIndex].targetPositiveDimensions.data[0],
 //                                                    &modelViewMatrixVideo.data[0]);
+            
+            // 保持高度
+            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[1] / aspectRatio,
+                                                    videoData[playerIndex].targetPositiveDimensions.data[1],
+                                                    videoData[playerIndex].targetPositiveDimensions.data[0],
+                                                    &modelViewMatrixVideo.data[0]);
             
             SampleApplicationUtils::multiplyMatrix(projectionMatrix.data,
                                                    &modelViewMatrixVideo.data[0],
@@ -613,7 +632,7 @@ namespace {
             }
         }
         
-        if (ERROR != curStatus && NOT_READY != curStatus && PLAYING != curStatus)
+        if (ERROR != curStatus && NOT_READY != curStatus && PLAYING != curStatus )
         {
             // 播放视频
             NSLog(@"Playing video with on-texture player");

@@ -66,6 +66,8 @@
     
     // 初始化AR
     [_vapp initAR:Vuforia::GL_20 orientation:APPLICATION_ORIENTATION];
+    
+    [self showIndicator];
 }
 
 
@@ -91,6 +93,9 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     
     self.navigationItem.titleView = imageView;
+    
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
 }
 
@@ -181,6 +186,27 @@
 
 
 
+#pragma mark - Indicator
+- (void)showIndicator
+{
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//    indicator.center = CGPointMake(50, 50);
+    indicator.center = SCREEN_CENTER;
+    indicator.tag = 7;
+    
+    [_eaglView addSubview:indicator];
+    
+    [indicator startAnimating];
+}
+
+- (void)removeIndicator
+{
+    UIActivityIndicatorView *indicator = (UIActivityIndicatorView *)[_eaglView viewWithTag:7];
+    [indicator removeFromSuperview];
+}
+
+
+
 #pragma mark - SampleApplicationControl
 /*
  * 初始化应用tracker
@@ -237,6 +263,8 @@
  */
 - (void)onInitARDone:(NSError *)initError
 {
+    [self removeIndicator];
+    
     if (nil == initError)
     {
         NSError *error = nil;
@@ -297,12 +325,12 @@
  */
 - (bool)doStopTrackers
 {
-    Vuforia::TrackerManager &trackerManger = Vuforia::TrackerManager::getInstance();
-    Vuforia::Tracker *tracker = trackerManger.getTracker(Vuforia::ObjectTracker::getClassType());
+    Vuforia::TrackerManager &trackerManager = Vuforia::TrackerManager::getInstance();
+    Vuforia::Tracker *tracker = trackerManager.getTracker(Vuforia::ObjectTracker::getClassType());
     
     if (NULL == tracker)
     {
-        NSLog(@"ERROR: Fialed to get the tracker from the tracker manager");
+        NSLog(@"ERROR: Failed to get the tracker from the tracker manager");
         return false;
     }
     
@@ -412,6 +440,7 @@
         else
         {
             NSLog(@"ERROR: Failed to create dataSet");
+            ret = NO;
         }
     }
     

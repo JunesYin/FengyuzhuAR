@@ -15,7 +15,7 @@
 #define SCREEN_SIZE                     [UIScreen mainScreen].bounds.size
 #define SCREEN_WIDTH                    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT                   [UIScreen mainScreen].bounds.size.height
-#define SCREEN_CENTER
+#define SCREEN_CENTER                   CGPointMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT/2.0)
 
 #define APPLICATION_ORIENTATION         [UIApplication sharedApplication].statusBarOrientation
 
