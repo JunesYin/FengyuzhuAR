@@ -28,7 +28,6 @@
 		850D23731EC2BAB80054EE94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850D23641EC2BAB80054EE94 /* SystemConfiguration.framework */; };
 		850D23741EC2BAB80054EE94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850D23651EC2BAB80054EE94 /* UIKit.framework */; };
 		850D23831EC2BF4D0054EE94 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 850D23821EC2BF4D0054EE94 /* ViewController.mm */; };
-		8599A4F11EC5B3EF00317D07 /* libVuforia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8599A4F01EC5B3EF00317D07 /* libVuforia.a */; };
 		859D3B361EC3FC2E0062EC62 /* LyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B351EC3FC2E0062EC62 /* LyUtil.m */; };
 		859D3B711EC3FCC30062EC62 /* SampleApplicationSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B601EC3FCC30062EC62 /* SampleApplicationSession.mm */; };
 		859D3B721EC3FCC30062EC62 /* SampleApplicationShaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B621EC3FCC30062EC62 /* SampleApplicationShaderUtils.m */; };
@@ -48,6 +47,7 @@
 		859D3B8E1EC3FD2D0062EC62 /* girl.xml in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8C1EC3FD2D0062EC62 /* girl.xml */; };
 		859D3BF91EC4127F0062EC62 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 859D3BF81EC4127F0062EC62 /* Resources.bundle */; };
 		859D3BFA1EC42C1C0062EC62 /* SimpleLove.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */; };
+		859E527C1ECAA54A0060939D /* libVuforia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 859E527B1ECAA54A0060939D /* libVuforia.a */; };
 		85B160611EC5837200F95883 /* LyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B160601EC5837200F95883 /* LyExtension.m */; };
 		85B1FC401EC2F7E300EF31CE /* DAE.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */; };
 		85EDB55D1EC996B0008F4F55 /* VideoPlayerHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */; };
@@ -79,7 +79,6 @@
 		850D23641EC2BAB80054EE94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		850D23651EC2BAB80054EE94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		850D23821EC2BF4D0054EE94 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
-		8599A4F01EC5B3EF00317D07 /* libVuforia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVuforia.a; path = build/lib/arm/libVuforia.a; sourceTree = "<group>"; };
 		859D3B341EC3FC2E0062EC62 /* LyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyUtil.h; sourceTree = "<group>"; };
 		859D3B351EC3FC2E0062EC62 /* LyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyUtil.m; sourceTree = "<group>"; };
 		859D3B5E1EC3FCC30062EC62 /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
@@ -110,7 +109,7 @@
 		859D3B8C1EC3FD2D0062EC62 /* girl.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = girl.xml; sourceTree = "<group>"; };
 		859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLove.mp4; sourceTree = "<group>"; };
 		859D3BF81EC4127F0062EC62 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
-		85AA88D91EC9592F00C67B3A /* LySingleInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LySingleInstance.h; sourceTree = "<group>"; };
+		859E527B1ECAA54A0060939D /* libVuforia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVuforia.a; path = ../../VuforiaSDK/lib/arm/libVuforia.a; sourceTree = "<group>"; };
 		85B1605F1EC5837200F95883 /* LyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyExtension.h; sourceTree = "<group>"; };
 		85B160601EC5837200F95883 /* LyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyExtension.m; sourceTree = "<group>"; };
 		85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = DAE.scnassets; sourceTree = "<group>"; };
@@ -138,7 +137,7 @@
 				850D23711EC2BAB80054EE94 /* SceneKit.framework in Frameworks */,
 				850D23721EC2BAB80054EE94 /* Security.framework in Frameworks */,
 				850D23731EC2BAB80054EE94 /* SystemConfiguration.framework in Frameworks */,
-				8599A4F11EC5B3EF00317D07 /* libVuforia.a in Frameworks */,
+				859E527C1ECAA54A0060939D /* libVuforia.a in Frameworks */,
 				850D23741EC2BAB80054EE94 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +197,7 @@
 		850D23561EC2BAB80054EE94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8599A4F01EC5B3EF00317D07 /* libVuforia.a */,
+				859E527B1ECAA54A0060939D /* libVuforia.a */,
 				850D23571EC2BAB80054EE94 /* AudioToolbox.framework */,
 				850D23581EC2BAB80054EE94 /* AVFoundation.framework */,
 				850D23591EC2BAB80054EE94 /* CoreFoundation.framework */,
@@ -225,7 +224,6 @@
 				859D3B351EC3FC2E0062EC62 /* LyUtil.m */,
 				85B1605F1EC5837200F95883 /* LyExtension.h */,
 				85B160601EC5837200F95883 /* LyExtension.m */,
-				85AA88D91EC9592F00C67B3A /* LySingleInstance.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -517,11 +515,11 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRC_ROOT)FengyuzhuAR/FengyuzhuAR-PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/build/include";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/include";
 				INFOPLIST_FILE = FengyuzhuAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/lib/arm";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/lib/arm";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FengyuzhuAR.FengyuzhuAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -536,11 +534,11 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRC_ROOT)FengyuzhuAR/FengyuzhuAR-PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/build/include";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/include";
 				INFOPLIST_FILE = FengyuzhuAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/lib/arm";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/lib/arm";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FengyuzhuAR.FengyuzhuAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
