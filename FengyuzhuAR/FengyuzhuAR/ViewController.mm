@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 #import "LyEAGLViewController.h"
 #import "LyUtil.h"
 
@@ -175,9 +176,6 @@ namespace {
 
 - (IBAction)takeStart:(UIButton *)sender {
     LyEAGLViewController *arViewController = [[LyEAGLViewController alloc] init];
-    
-    NSLog(@"arViewController: %@", arViewController);
-    
     [self performSelector:@selector(start:) withObject:arViewController afterDelay:0.05];
 }
 

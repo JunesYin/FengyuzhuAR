@@ -28,29 +28,28 @@
 		850D23731EC2BAB80054EE94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850D23641EC2BAB80054EE94 /* SystemConfiguration.framework */; };
 		850D23741EC2BAB80054EE94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850D23651EC2BAB80054EE94 /* UIKit.framework */; };
 		850D23831EC2BF4D0054EE94 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 850D23821EC2BF4D0054EE94 /* ViewController.mm */; };
+		850F71C21ECC2EF900747693 /* SampleApplicationSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 850F71B01ECC2EF900747693 /* SampleApplicationSession.mm */; };
+		850F71C31ECC2EF900747693 /* SampleApplicationShaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 850F71B21ECC2EF900747693 /* SampleApplicationShaderUtils.m */; };
+		850F71C41ECC2EF900747693 /* SampleApplicationUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 850F71B31ECC2EF900747693 /* SampleApplicationUtils.cpp */; };
+		850F71C51ECC2EF900747693 /* SampleAppRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 850F71B61ECC2EF900747693 /* SampleAppRenderer.mm */; };
+		850F71C61ECC2EF900747693 /* Background.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71B91ECC2EF900747693 /* Background.fragsh */; };
+		850F71C71ECC2EF900747693 /* Background.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71BA1ECC2EF900747693 /* Background.vertsh */; };
+		850F71C81ECC2EF900747693 /* Line.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71BB1ECC2EF900747693 /* Line.fragsh */; };
+		850F71C91ECC2EF900747693 /* Line.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71BC1ECC2EF900747693 /* Line.vertsh */; };
+		850F71CA1ECC2EF900747693 /* Simple.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71BD1ECC2EF900747693 /* Simple.fragsh */; };
+		850F71CB1ECC2EF900747693 /* Simple.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 850F71BE1ECC2EF900747693 /* Simple.vertsh */; };
+		850F71CC1ECC2EF900747693 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 850F71C01ECC2EF900747693 /* Texture.mm */; };
+		850F71E71ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.dat in Resources */ = {isa = PBXBuildFile; fileRef = 850F71E51ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.dat */; };
+		850F71E81ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 850F71E61ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.xml */; };
+		8563DCED1ECC174100376F04 /* LyEAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8563DCE91ECC174100376F04 /* LyEAGLView.mm */; };
+		8563DCEE1ECC174100376F04 /* LyEAGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8563DCEB1ECC174100376F04 /* LyEAGLViewController.mm */; };
 		859D3B361EC3FC2E0062EC62 /* LyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B351EC3FC2E0062EC62 /* LyUtil.m */; };
-		859D3B711EC3FCC30062EC62 /* SampleApplicationSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B601EC3FCC30062EC62 /* SampleApplicationSession.mm */; };
-		859D3B721EC3FCC30062EC62 /* SampleApplicationShaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B621EC3FCC30062EC62 /* SampleApplicationShaderUtils.m */; };
-		859D3B731EC3FCC30062EC62 /* SampleApplicationUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B631EC3FCC30062EC62 /* SampleApplicationUtils.cpp */; };
-		859D3B741EC3FCC30062EC62 /* SampleAppRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B661EC3FCC30062EC62 /* SampleAppRenderer.mm */; };
-		859D3B751EC3FCC30062EC62 /* Background.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B691EC3FCC30062EC62 /* Background.fragsh */; };
-		859D3B761EC3FCC30062EC62 /* Background.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6A1EC3FCC30062EC62 /* Background.vertsh */; };
-		859D3B771EC3FCC30062EC62 /* Line.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6B1EC3FCC30062EC62 /* Line.fragsh */; };
-		859D3B781EC3FCC30062EC62 /* Line.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6C1EC3FCC30062EC62 /* Line.vertsh */; };
-		859D3B791EC3FCC30062EC62 /* Simple.fragsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6D1EC3FCC30062EC62 /* Simple.fragsh */; };
-		859D3B7A1EC3FCC30062EC62 /* Simple.vertsh in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B6E1EC3FCC30062EC62 /* Simple.vertsh */; };
-		859D3B7B1EC3FCC30062EC62 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B701EC3FCC30062EC62 /* Texture.mm */; };
 		859D3B811EC3FCEC0062EC62 /* SampleMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */; };
-		859D3B881EC3FCF20062EC62 /* LyEAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B851EC3FCF20062EC62 /* LyEAGLView.mm */; };
-		859D3B891EC3FCF20062EC62 /* LyEAGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 859D3B871EC3FCF20062EC62 /* LyEAGLViewController.mm */; };
-		859D3B8D1EC3FD2D0062EC62 /* girl.dat in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8B1EC3FD2D0062EC62 /* girl.dat */; };
-		859D3B8E1EC3FD2D0062EC62 /* girl.xml in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8C1EC3FD2D0062EC62 /* girl.xml */; };
 		859D3BF91EC4127F0062EC62 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 859D3BF81EC4127F0062EC62 /* Resources.bundle */; };
-		859D3BFA1EC42C1C0062EC62 /* SimpleLove.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */; };
 		859E527C1ECAA54A0060939D /* libVuforia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 859E527B1ECAA54A0060939D /* libVuforia.a */; };
+		85AA9F0C1ED67898005A9430 /* LyProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA9F0B1ED67898005A9430 /* LyProgressView.m */; };
+		85AA9F341ED6A4AF005A9430 /* VideoPlayerHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85AA9F331ED6A4AF005A9430 /* VideoPlayerHelper.mm */; };
 		85B160611EC5837200F95883 /* LyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B160601EC5837200F95883 /* LyExtension.m */; };
-		85B1FC401EC2F7E300EF31CE /* DAE.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */; };
-		85EDB55D1EC996B0008F4F55 /* VideoPlayerHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,43 +78,43 @@
 		850D23641EC2BAB80054EE94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		850D23651EC2BAB80054EE94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		850D23821EC2BF4D0054EE94 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		850F71AC1ECC2EF900747693 /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
+		850F71AF1ECC2EF900747693 /* SampleApplicationSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationSession.h; sourceTree = "<group>"; };
+		850F71B01ECC2EF900747693 /* SampleApplicationSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleApplicationSession.mm; sourceTree = "<group>"; };
+		850F71B11ECC2EF900747693 /* SampleApplicationShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationShaderUtils.h; sourceTree = "<group>"; };
+		850F71B21ECC2EF900747693 /* SampleApplicationShaderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleApplicationShaderUtils.m; sourceTree = "<group>"; };
+		850F71B31ECC2EF900747693 /* SampleApplicationUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleApplicationUtils.cpp; sourceTree = "<group>"; };
+		850F71B41ECC2EF900747693 /* SampleApplicationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationUtils.h; sourceTree = "<group>"; };
+		850F71B51ECC2EF900747693 /* SampleAppRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppRenderer.h; sourceTree = "<group>"; };
+		850F71B61ECC2EF900747693 /* SampleAppRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleAppRenderer.mm; sourceTree = "<group>"; };
+		850F71B71ECC2EF900747693 /* SampleGLResourceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleGLResourceHandler.h; sourceTree = "<group>"; };
+		850F71B91ECC2EF900747693 /* Background.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Background.fragsh; sourceTree = "<group>"; };
+		850F71BA1ECC2EF900747693 /* Background.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Background.vertsh; sourceTree = "<group>"; };
+		850F71BB1ECC2EF900747693 /* Line.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Line.fragsh; sourceTree = "<group>"; };
+		850F71BC1ECC2EF900747693 /* Line.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Line.vertsh; sourceTree = "<group>"; };
+		850F71BD1ECC2EF900747693 /* Simple.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.fragsh; sourceTree = "<group>"; };
+		850F71BE1ECC2EF900747693 /* Simple.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.vertsh; sourceTree = "<group>"; };
+		850F71BF1ECC2EF900747693 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		850F71C01ECC2EF900747693 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
+		850F71E51ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = FengyuzhuAR_MingRenTang_iOS.dat; sourceTree = "<group>"; };
+		850F71E61ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FengyuzhuAR_MingRenTang_iOS.xml; sourceTree = "<group>"; };
+		8563DCE81ECC174100376F04 /* LyEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLView.h; sourceTree = "<group>"; };
+		8563DCE91ECC174100376F04 /* LyEAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LyEAGLView.mm; sourceTree = "<group>"; };
+		8563DCEA1ECC174100376F04 /* LyEAGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLViewController.h; sourceTree = "<group>"; };
+		8563DCEB1ECC174100376F04 /* LyEAGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LyEAGLViewController.mm; sourceTree = "<group>"; };
 		859D3B341EC3FC2E0062EC62 /* LyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyUtil.h; sourceTree = "<group>"; };
 		859D3B351EC3FC2E0062EC62 /* LyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyUtil.m; sourceTree = "<group>"; };
-		859D3B5E1EC3FCC30062EC62 /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
-		859D3B5F1EC3FCC30062EC62 /* SampleApplicationSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationSession.h; sourceTree = "<group>"; };
-		859D3B601EC3FCC30062EC62 /* SampleApplicationSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleApplicationSession.mm; sourceTree = "<group>"; };
-		859D3B611EC3FCC30062EC62 /* SampleApplicationShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationShaderUtils.h; sourceTree = "<group>"; };
-		859D3B621EC3FCC30062EC62 /* SampleApplicationShaderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleApplicationShaderUtils.m; sourceTree = "<group>"; };
-		859D3B631EC3FCC30062EC62 /* SampleApplicationUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleApplicationUtils.cpp; sourceTree = "<group>"; };
-		859D3B641EC3FCC30062EC62 /* SampleApplicationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleApplicationUtils.h; sourceTree = "<group>"; };
-		859D3B651EC3FCC30062EC62 /* SampleAppRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppRenderer.h; sourceTree = "<group>"; };
-		859D3B661EC3FCC30062EC62 /* SampleAppRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleAppRenderer.mm; sourceTree = "<group>"; };
-		859D3B671EC3FCC30062EC62 /* SampleGLResourceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleGLResourceHandler.h; sourceTree = "<group>"; };
-		859D3B691EC3FCC30062EC62 /* Background.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Background.fragsh; sourceTree = "<group>"; };
-		859D3B6A1EC3FCC30062EC62 /* Background.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Background.vertsh; sourceTree = "<group>"; };
-		859D3B6B1EC3FCC30062EC62 /* Line.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Line.fragsh; sourceTree = "<group>"; };
-		859D3B6C1EC3FCC30062EC62 /* Line.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Line.vertsh; sourceTree = "<group>"; };
-		859D3B6D1EC3FCC30062EC62 /* Simple.fragsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.fragsh; sourceTree = "<group>"; };
-		859D3B6E1EC3FCC30062EC62 /* Simple.vertsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.vertsh; sourceTree = "<group>"; };
-		859D3B6F1EC3FCC30062EC62 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
-		859D3B701EC3FCC30062EC62 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
 		859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleMath.cpp; sourceTree = "<group>"; };
 		859D3B7E1EC3FCEC0062EC62 /* SampleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleMath.h; sourceTree = "<group>"; };
-		859D3B841EC3FCF20062EC62 /* LyEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLView.h; sourceTree = "<group>"; };
-		859D3B851EC3FCF20062EC62 /* LyEAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LyEAGLView.mm; sourceTree = "<group>"; };
-		859D3B861EC3FCF20062EC62 /* LyEAGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyEAGLViewController.h; sourceTree = "<group>"; };
-		859D3B871EC3FCF20062EC62 /* LyEAGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LyEAGLViewController.mm; sourceTree = "<group>"; };
-		859D3B8B1EC3FD2D0062EC62 /* girl.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.dat; sourceTree = "<group>"; };
-		859D3B8C1EC3FD2D0062EC62 /* girl.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = girl.xml; sourceTree = "<group>"; };
-		859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLove.mp4; sourceTree = "<group>"; };
 		859D3BF81EC4127F0062EC62 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		859E527B1ECAA54A0060939D /* libVuforia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVuforia.a; path = ../../VuforiaSDK/lib/arm/libVuforia.a; sourceTree = "<group>"; };
+		85AA9F0A1ED67898005A9430 /* LyProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyProgressView.h; sourceTree = "<group>"; };
+		85AA9F0B1ED67898005A9430 /* LyProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyProgressView.m; sourceTree = "<group>"; };
+		85AA9F321ED6A4AF005A9430 /* VideoPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerHelper.h; sourceTree = "<group>"; };
+		85AA9F331ED6A4AF005A9430 /* VideoPlayerHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayerHelper.mm; sourceTree = "<group>"; };
 		85B1605F1EC5837200F95883 /* LyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyExtension.h; sourceTree = "<group>"; };
 		85B160601EC5837200F95883 /* LyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyExtension.m; sourceTree = "<group>"; };
-		85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = DAE.scnassets; sourceTree = "<group>"; };
 		85C150D61EC30FDC003BBE06 /* FengyuzhuAR-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FengyuzhuAR-PrefixHeader.pch"; sourceTree = "<group>"; };
-		85EDB55B1EC996B0008F4F55 /* VideoPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerHelper.h; sourceTree = "<group>"; };
-		85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayerHelper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,19 +164,18 @@
 		850D22E91EC2B3120054EE94 /* FengyuzhuAR */ = {
 			isa = PBXGroup;
 			children = (
+				8563DCE61ECC174100376F04 /* Features */,
 				859D3BF81EC4127F0062EC62 /* Resources.bundle */,
-				859D3B831EC3FCF20062EC62 /* Classes */,
 				859D3B8A1EC3FD2D0062EC62 /* Resources */,
 				859D3B331EC3FC2E0062EC62 /* Util */,
+				850F71AB1ECC2EF900747693 /* Vuforia */,
 				859D3B7C1EC3FCEC0062EC62 /* VuforiaVideo */,
-				859D3B5D1EC3FCC30062EC62 /* Vuforia */,
 				850D22ED1EC2B3120054EE94 /* AppDelegate.h */,
 				850D22EE1EC2B3120054EE94 /* AppDelegate.m */,
 				850D22F01EC2B3120054EE94 /* ViewController.h */,
 				850D23821EC2BF4D0054EE94 /* ViewController.mm */,
 				850D22F31EC2B3120054EE94 /* Main.storyboard */,
 				850D22F61EC2B3120054EE94 /* Assets.xcassets */,
-				85B1FC3F1EC2F7E300EF31CE /* DAE.scnassets */,
 				850D22F81EC2B3120054EE94 /* LaunchScreen.storyboard */,
 				850D22FB1EC2B3120054EE94 /* Info.plist */,
 				850D22EA1EC2B3120054EE94 /* Supporting Files */,
@@ -217,6 +215,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		850F71AB1ECC2EF900747693 /* Vuforia */ = {
+			isa = PBXGroup;
+			children = (
+				850F71AC1ECC2EF900747693 /* Quad.h */,
+				850F71AF1ECC2EF900747693 /* SampleApplicationSession.h */,
+				850F71B01ECC2EF900747693 /* SampleApplicationSession.mm */,
+				850F71B11ECC2EF900747693 /* SampleApplicationShaderUtils.h */,
+				850F71B21ECC2EF900747693 /* SampleApplicationShaderUtils.m */,
+				850F71B31ECC2EF900747693 /* SampleApplicationUtils.cpp */,
+				850F71B41ECC2EF900747693 /* SampleApplicationUtils.h */,
+				850F71B51ECC2EF900747693 /* SampleAppRenderer.h */,
+				850F71B61ECC2EF900747693 /* SampleAppRenderer.mm */,
+				850F71B71ECC2EF900747693 /* SampleGLResourceHandler.h */,
+				850F71B81ECC2EF900747693 /* shaders */,
+				850F71BF1ECC2EF900747693 /* Texture.h */,
+				850F71C01ECC2EF900747693 /* Texture.mm */,
+			);
+			path = Vuforia;
+			sourceTree = "<group>";
+		};
+		850F71B81ECC2EF900747693 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				850F71B91ECC2EF900747693 /* Background.fragsh */,
+				850F71BA1ECC2EF900747693 /* Background.vertsh */,
+				850F71BB1ECC2EF900747693 /* Line.fragsh */,
+				850F71BC1ECC2EF900747693 /* Line.vertsh */,
+				850F71BD1ECC2EF900747693 /* Simple.fragsh */,
+				850F71BE1ECC2EF900747693 /* Simple.vertsh */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		8563DCE61ECC174100376F04 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8563DCE71ECC174100376F04 /* ImageTargets */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8563DCE71ECC174100376F04 /* ImageTargets */ = {
+			isa = PBXGroup;
+			children = (
+				8563DCE81ECC174100376F04 /* LyEAGLView.h */,
+				8563DCE91ECC174100376F04 /* LyEAGLView.mm */,
+				8563DCEA1ECC174100376F04 /* LyEAGLViewController.h */,
+				8563DCEB1ECC174100376F04 /* LyEAGLViewController.mm */,
+			);
+			path = ImageTargets;
+			sourceTree = "<group>";
+		};
 		859D3B331EC3FC2E0062EC62 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,41 +274,10 @@
 				859D3B351EC3FC2E0062EC62 /* LyUtil.m */,
 				85B1605F1EC5837200F95883 /* LyExtension.h */,
 				85B160601EC5837200F95883 /* LyExtension.m */,
+				85AA9F0A1ED67898005A9430 /* LyProgressView.h */,
+				85AA9F0B1ED67898005A9430 /* LyProgressView.m */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		859D3B5D1EC3FCC30062EC62 /* Vuforia */ = {
-			isa = PBXGroup;
-			children = (
-				859D3B5E1EC3FCC30062EC62 /* Quad.h */,
-				859D3B5F1EC3FCC30062EC62 /* SampleApplicationSession.h */,
-				859D3B601EC3FCC30062EC62 /* SampleApplicationSession.mm */,
-				859D3B611EC3FCC30062EC62 /* SampleApplicationShaderUtils.h */,
-				859D3B621EC3FCC30062EC62 /* SampleApplicationShaderUtils.m */,
-				859D3B631EC3FCC30062EC62 /* SampleApplicationUtils.cpp */,
-				859D3B641EC3FCC30062EC62 /* SampleApplicationUtils.h */,
-				859D3B651EC3FCC30062EC62 /* SampleAppRenderer.h */,
-				859D3B661EC3FCC30062EC62 /* SampleAppRenderer.mm */,
-				859D3B671EC3FCC30062EC62 /* SampleGLResourceHandler.h */,
-				859D3B681EC3FCC30062EC62 /* shaders */,
-				859D3B6F1EC3FCC30062EC62 /* Texture.h */,
-				859D3B701EC3FCC30062EC62 /* Texture.mm */,
-			);
-			path = Vuforia;
-			sourceTree = "<group>";
-		};
-		859D3B681EC3FCC30062EC62 /* shaders */ = {
-			isa = PBXGroup;
-			children = (
-				859D3B691EC3FCC30062EC62 /* Background.fragsh */,
-				859D3B6A1EC3FCC30062EC62 /* Background.vertsh */,
-				859D3B6B1EC3FCC30062EC62 /* Line.fragsh */,
-				859D3B6C1EC3FCC30062EC62 /* Line.vertsh */,
-				859D3B6D1EC3FCC30062EC62 /* Simple.fragsh */,
-				859D3B6E1EC3FCC30062EC62 /* Simple.vertsh */,
-			);
-			path = shaders;
 			sourceTree = "<group>";
 		};
 		859D3B7C1EC3FCEC0062EC62 /* VuforiaVideo */ = {
@@ -266,29 +285,17 @@
 			children = (
 				859D3B7D1EC3FCEC0062EC62 /* SampleMath.cpp */,
 				859D3B7E1EC3FCEC0062EC62 /* SampleMath.h */,
-				85EDB55B1EC996B0008F4F55 /* VideoPlayerHelper.h */,
-				85EDB55C1EC996B0008F4F55 /* VideoPlayerHelper.mm */,
+				85AA9F321ED6A4AF005A9430 /* VideoPlayerHelper.h */,
+				85AA9F331ED6A4AF005A9430 /* VideoPlayerHelper.mm */,
 			);
 			path = VuforiaVideo;
-			sourceTree = "<group>";
-		};
-		859D3B831EC3FCF20062EC62 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				859D3B841EC3FCF20062EC62 /* LyEAGLView.h */,
-				859D3B851EC3FCF20062EC62 /* LyEAGLView.mm */,
-				859D3B861EC3FCF20062EC62 /* LyEAGLViewController.h */,
-				859D3B871EC3FCF20062EC62 /* LyEAGLViewController.mm */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		859D3B8A1EC3FD2D0062EC62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				859D3B8B1EC3FD2D0062EC62 /* girl.dat */,
-				859D3B8C1EC3FD2D0062EC62 /* girl.xml */,
-				859D3B8F1EC3FD750062EC62 /* SimpleLove.mp4 */,
+				850F71E51ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.dat */,
+				850F71E61ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.xml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -352,20 +359,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859D3B771EC3FCC30062EC62 /* Line.fragsh in Resources */,
 				850D22FA1EC2B3120054EE94 /* LaunchScreen.storyboard in Resources */,
-				859D3B791EC3FCC30062EC62 /* Simple.fragsh in Resources */,
+				850F71E81ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.xml in Resources */,
 				850D22F71EC2B3120054EE94 /* Assets.xcassets in Resources */,
-				85B1FC401EC2F7E300EF31CE /* DAE.scnassets in Resources */,
-				859D3B761EC3FCC30062EC62 /* Background.vertsh in Resources */,
-				859D3B8D1EC3FD2D0062EC62 /* girl.dat in Resources */,
-				859D3B781EC3FCC30062EC62 /* Line.vertsh in Resources */,
+				850F71CB1ECC2EF900747693 /* Simple.vertsh in Resources */,
+				850F71C71ECC2EF900747693 /* Background.vertsh in Resources */,
+				850F71C81ECC2EF900747693 /* Line.fragsh in Resources */,
+				850F71C91ECC2EF900747693 /* Line.vertsh in Resources */,
+				850F71C61ECC2EF900747693 /* Background.fragsh in Resources */,
 				859D3BF91EC4127F0062EC62 /* Resources.bundle in Resources */,
-				859D3B7A1EC3FCC30062EC62 /* Simple.vertsh in Resources */,
-				859D3B8E1EC3FD2D0062EC62 /* girl.xml in Resources */,
 				850D22F51EC2B3120054EE94 /* Main.storyboard in Resources */,
-				859D3B751EC3FCC30062EC62 /* Background.fragsh in Resources */,
-				859D3BFA1EC42C1C0062EC62 /* SimpleLove.mp4 in Resources */,
+				850F71CA1ECC2EF900747693 /* Simple.fragsh in Resources */,
+				850F71E71ECC4AB200747693 /* FengyuzhuAR_MingRenTang_iOS.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,19 +382,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				850D23831EC2BF4D0054EE94 /* ViewController.mm in Sources */,
-				859D3B721EC3FCC30062EC62 /* SampleApplicationShaderUtils.m in Sources */,
-				859D3B731EC3FCC30062EC62 /* SampleApplicationUtils.cpp in Sources */,
+				85AA9F0C1ED67898005A9430 /* LyProgressView.m in Sources */,
 				850D22EF1EC2B3120054EE94 /* AppDelegate.m in Sources */,
-				85EDB55D1EC996B0008F4F55 /* VideoPlayerHelper.mm in Sources */,
+				850F71C41ECC2EF900747693 /* SampleApplicationUtils.cpp in Sources */,
+				850F71C31ECC2EF900747693 /* SampleApplicationShaderUtils.m in Sources */,
 				859D3B361EC3FC2E0062EC62 /* LyUtil.m in Sources */,
+				850F71C51ECC2EF900747693 /* SampleAppRenderer.mm in Sources */,
+				850F71C21ECC2EF900747693 /* SampleApplicationSession.mm in Sources */,
 				859D3B811EC3FCEC0062EC62 /* SampleMath.cpp in Sources */,
+				85AA9F341ED6A4AF005A9430 /* VideoPlayerHelper.mm in Sources */,
 				850D22EC1EC2B3120054EE94 /* main.m in Sources */,
 				85B160611EC5837200F95883 /* LyExtension.m in Sources */,
-				859D3B741EC3FCC30062EC62 /* SampleAppRenderer.mm in Sources */,
-				859D3B891EC3FCF20062EC62 /* LyEAGLViewController.mm in Sources */,
-				859D3B711EC3FCC30062EC62 /* SampleApplicationSession.mm in Sources */,
-				859D3B881EC3FCF20062EC62 /* LyEAGLView.mm in Sources */,
-				859D3B7B1EC3FCC30062EC62 /* Texture.mm in Sources */,
+				8563DCED1ECC174100376F04 /* LyEAGLView.mm in Sources */,
+				8563DCEE1ECC174100376F04 /* LyEAGLViewController.mm in Sources */,
+				850F71CC1ECC2EF900747693 /* Texture.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,10 +523,10 @@
 				GCC_PREFIX_HEADER = "$(SRC_ROOT)FengyuzhuAR/FengyuzhuAR-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/include";
 				INFOPLIST_FILE = FengyuzhuAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/lib/arm";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FengyuzhuAR.FengyuzhuAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FengYuZhuAR.FyzExhibition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -536,10 +542,10 @@
 				GCC_PREFIX_HEADER = "$(SRC_ROOT)FengyuzhuAR/FengyuzhuAR-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/include";
 				INFOPLIST_FILE = FengyuzhuAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../VuforiaSDK/lib/arm";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FengyuzhuAR.FengyuzhuAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FengYuZhuAR.FyzExhibition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

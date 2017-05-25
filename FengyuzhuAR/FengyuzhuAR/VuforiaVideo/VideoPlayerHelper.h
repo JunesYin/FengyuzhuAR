@@ -13,6 +13,10 @@ countries.
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+
+
+
+
 @class LyEAGLViewController;
 
 // Media states
@@ -96,8 +100,16 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
     } playerType;
 }
 
+@property (nonatomic, strong) AVURLAsset* asset;
+@property (nonatomic, strong) AVPlayer* player;
+
 
 @property (strong, nonatomic) AVPlayerItemVideoOutput *videoOutput;
+
+@property (nonatomic, readonly) float loadProgress;
+
+@property (nonatomic) BOOL isLoaded;
+
 
 
 - (id)initWithRootViewController:(LyEAGLViewController *) rootViewController;
@@ -116,5 +128,6 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
 - (BOOL)seekTo:(float)position;
 - (float)getCurrentPosition;
 - (BOOL)setVolume:(float)volume;
+
 
 @end

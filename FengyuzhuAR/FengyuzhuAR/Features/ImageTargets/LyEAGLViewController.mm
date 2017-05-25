@@ -22,6 +22,8 @@
 
 
 
+static const NSString *ImageTargetDataSetName = @"FengyuzhuAR_MingRenTang_iOS.xml";
+
 
 @interface LyEAGLViewController ()  <SampleApplicationControl>
 
@@ -87,15 +89,12 @@
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
-    
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
     UIImage *image = [LyUtil imageNamed:@"AR"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     
     self.navigationItem.titleView = imageView;
-    
-    
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
 }
 
@@ -123,6 +122,10 @@
  */
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+
+
     if (!isFullScreenPlayerPlaying)
     {
         [_eaglView dismiss];
@@ -130,7 +133,7 @@
         [_vapp stopAR:nil];
         
         // Vuforia已经暂停，渲染线程停止执行，通知RootViewController的EAGLView应该
-        // 停止一切OpenGL ES，置零
+        // 停止一切OpenGL ES指令
         [self finishOpenGLESCommands];
         
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -139,8 +142,6 @@
     
     [_eaglView removeSpecialEffects];
     
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = YES;
 }
 
 
@@ -232,7 +233,7 @@
  */
 - (bool)doLoadTrackersData
 {
-    return [self loadAndActivateImageTrackerDataSet:@"girl.xml"];
+    return [self loadAndActivateImageTrackerDataSet:ImageTargetDataSetName];
 }
 
 
@@ -241,7 +242,8 @@
  */
 - (bool)doStartTrackers
 {
-    Vuforia::setHint(Vuforia::HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS, jNumVideoTargets);
+    // 启用多目标识别
+    Vuforia::setHint(Vuforia::HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS, kNumImageTargets);
     
     Vuforia::TrackerManager &trackerManager = Vuforia::TrackerManager::getInstance();
     Vuforia::Tracker *tracker = trackerManager.getTracker(Vuforia::ObjectTracker::getClassType());
@@ -395,7 +397,7 @@
 /*
  * 读取imageTracker dataSet
  */
-- (BOOL)loadAndActivateImageTrackerDataSet:(NSString *)dataFile
+- (BOOL)loadAndActivateImageTrackerDataSet:(const NSString *)dataFile
 {
     NSLog(@"loadAndActivateImageTrackerDataSet (%@)", dataFile);
     BOOL ret = YES;

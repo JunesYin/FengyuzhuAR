@@ -20,6 +20,9 @@
 #define APPLICATION_ORIENTATION         [UIApplication sharedApplication].statusBarOrientation
 
 
+#define FyzTintColor                    [[UIColor alloc] initWithRed:255.0/255.0 green:78.0/255.0 blue:80.0/255.0 alpha:1.0]
+
+
 static const CGFloat HorizontalMargin = 10.0;
 static const CGFloat VerticalMargin = 5.0;
 

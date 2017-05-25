@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GLKit/GLKit.h>
 #import <Vuforia/UIGLViewProtocol.h>
-#import <SceneKit/SceneKit.h>
 
 #import "Texture.h"
 #import "SampleApplicationSession.h"
@@ -18,15 +16,26 @@
 #import "SampleAppRenderer.h"
 
 
-static const int jNumVideoTargets = 2;
+
+//#define isNeedRender3DModel_ImageTarget
+
+
+#ifdef isNeedRender3DModel_ImageTarget
+#import <GLKit/GLKit.h>
+#import <SceneKit/SceneKit.h>
+#endif
+
+
+static const int kNumImageTargets = 12;
 
 @class LyEAGLViewController;
+@class LyProgressView;
 
 @interface LyEAGLView : UIView <UIGLViewProtocol, SampleGLResourceHandler, SampleAppRendererControl>
 {
     // 为每一个目标实例化一个VideoPlayerHelper
-    VideoPlayerHelper *videoPlayerHelper[jNumVideoTargets];
-    float videoPlaybackTime[jNumVideoTargets];
+    VideoPlayerHelper *videoPlayerHelper[kNumImageTargets];
+//    float videoPlaybackTime[kNumImageTargets];
     
 //    LyEAGLViewController *videoPlaybackViewController;
     
@@ -41,9 +50,9 @@ static const int jNumVideoTargets = 2;
     EAGLContext *context;
     
     // 用于渲染视图的帧缓存，颜色缓存，深度缓存
-    GLuint defaultFrameBuffer;
-    GLuint colorRenderBuffer;
-    GLuint depthRenderBuffer;
+    GLuint defaultFramebuffer;
+    GLuint colorRenderbuffer;
+    GLuint depthRenderbuffer;
     
     // Shader handles
     GLuint shaderProgramID;
@@ -56,20 +65,25 @@ static const int jNumVideoTargets = 2;
     // 用于绘制的纹理
     SampleAppRenderer *sampleAppRenderer;
     
-    
+#ifdef isNeedRender3DModel_ImageTarget
     NSMutableDictionary *dicScene;
     NSString *curSceneKey;
     NSString *nextSceneKey;
+#endif
 }
 
 
 @property (weak, nonatomic) LyEAGLViewController *videoPlaybackViewController;;
 @property (weak, nonatomic) SampleApplicationSession *vapp;
 
+@property (strong, nonatomic) LyProgressView *progressView;
+
+
+#ifdef isNeedRender3DModel_ImageTarget
 @property (strong, nonatomic) SCNRenderer *renderer;
 @property (strong, nonatomic) SCNNode *cameraNode;
 @property (assign, nonatomic, readonly) SCNMatrix4 projectionTransform;
-@property (assign, nonatomic) CFAbsoluteTime startTime;
+#endif
 
 
 

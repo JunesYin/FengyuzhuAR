@@ -13,6 +13,7 @@ countries.
 
 #import "LyEAGLViewController.h"
 
+
 #ifdef DEBUG
 #define DEBUGLOG(x) NSLog(x)
 #else
@@ -41,6 +42,10 @@ static NSString* const kStatusKey = @"status";
 static NSString* const kTracksKey = @"tracks";
 static NSString* const kRateKey = @"rate";
 
+
+static NSString * const loadProgressKey = @"loadedTimeRanges";
+
+
 //---------------------------------------------------------------------------------
 #pragma mark - VideoPlayerHelper private methods and properties
 
@@ -49,12 +54,12 @@ static NSString* const kRateKey = @"rate";
 // We don't own rootViewController, so we use "weak" property
 @property (nonatomic, weak) LyEAGLViewController * rootViewController;
 @property (nonatomic, strong) MovieViewController* movieViewController;
-@property (nonatomic, strong) AVPlayer* player;
+//@property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) NSTimer* frameTimer;
 @property (nonatomic, strong) NSURL* mediaURL;
 @property (nonatomic, strong) AVAssetReader* assetReader;
 @property (nonatomic, strong) AVAssetReaderTrackOutput* assetReaderTrackOutputVideo;
-@property (nonatomic, strong) AVURLAsset* asset;
+//@property (nonatomic, strong) AVURLAsset* asset;
 @property (nonatomic, strong) NSLock* dataLock;
 @property (nonatomic, strong) NSLock* latestSampleBufferLock;
 
@@ -216,6 +221,8 @@ static NSString* const kRateKey = @"rate";
         ret = [self loadMediaURL: mediaURL];
     }
     
+    _isLoaded = YES;
+    
     return ret;
 }
 
@@ -232,11 +239,14 @@ static NSString* const kRateKey = @"rate";
         // when we are called back by the system
         ret = YES;
         
+        __weak AVURLAsset *weakAssert = asset;
         [asset loadValuesAsynchronouslyForKeys:@[kTracksKey] completionHandler:^{
             // Completion handler block (dispatch on main queue when loading completes)
             dispatch_async(dispatch_get_main_queue(), ^{
+                
+                __strong AVURLAsset *strongAsset = weakAssert;
                 NSError *error = nil;
-                AVKeyValueStatus status = [asset statusOfValueForKey:kTracksKey error:&error];
+                AVKeyValueStatus status = [strongAsset statusOfValueForKey:kTracksKey error:&error];
                 
                 _videoOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:@{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)}];
                 
@@ -253,9 +263,11 @@ static NSString* const kRateKey = @"rate";
                     // ERROR
                     mediaState = ERROR;
                 }
+                
             });
             
         }];
+        
     }
     
     return ret;
@@ -785,6 +797,20 @@ static NSString* const kRateKey = @"rate";
             [player seekToTime:startTime];
         }
     }
+    else if ([path isEqualToString:loadProgressKey])
+    {
+        AVPlayerItem *playerItem = player.currentItem;
+        NSArray *loadedTimeRanges = [playerItem loadedTimeRanges];
+        CMTimeRange timeRange = [loadedTimeRanges.firstObject CMTimeRangeValue];// 获取缓冲区域
+        float startSeconds = CMTimeGetSeconds(timeRange.start);
+        float durationSeconds = CMTimeGetSeconds(timeRange.duration);
+        NSTimeInterval timeInterval = startSeconds + durationSeconds;// 计算缓冲总进度
+        CMTime duration = playerItem.duration;
+        CGFloat totalDuration = CMTimeGetSeconds(duration);
+        
+        
+        _loadProgress = timeInterval / totalDuration;
+    }
 }
 
 
@@ -907,6 +933,7 @@ static NSString* const kRateKey = @"rate";
     
     // Remove KVO observers
     [[player currentItem] removeObserver:self forKeyPath:kStatusKey];
+    [[player currentItem] removeObserver:self forKeyPath:loadProgressKey];
     [player removeObserver:self forKeyPath:kRateKey];
     
     // Release AVPlayer, AVAsset, etc.
@@ -932,6 +959,7 @@ static NSString* const kRateKey = @"rate";
     videoSize = videoTrack.naturalSize;
     
     videoLengthSeconds = CMTimeGetSeconds([self.asset duration]);
+    
     
     // Start playback at time 0.0
     playerCursorStartPosition = kCMTimeZero;
@@ -993,6 +1021,9 @@ static NSString* const kRateKey = @"rate";
 {
     // Create a player item
     AVPlayerItem* item = [AVPlayerItem playerItemWithAsset:asset];
+    if ([item respondsToSelector:@selector(setCanUseNetworkResourcesForLiveStreamingWhilePaused:)]) {
+        item.canUseNetworkResourcesForLiveStreamingWhilePaused = YES;
+    }
     
     // Add player item status KVO observer
     NSKeyValueObservingOptions opts = NSKeyValueObservingOptionNew;
@@ -1004,6 +1035,7 @@ static NSString* const kRateKey = @"rate";
     
     // Add player rate KVO observer
     [player addObserver:self forKeyPath:kRateKey options:opts context:AVPlayerRateObservationContext];
+    [item addObserver:self forKeyPath:loadProgressKey options:NSKeyValueObservingOptionNew context:nil];
 }
 
 
@@ -1293,4 +1325,20 @@ static NSString* const kRateKey = @"rate";
     
     stopFrameTimer = NO;
 }
+
+
+
+- (float)videoDuration
+{
+    return videoLengthSeconds;
+}
+
+- (float)videoCache
+{
+    return 0;
+}
+
+
+
+
 @end
