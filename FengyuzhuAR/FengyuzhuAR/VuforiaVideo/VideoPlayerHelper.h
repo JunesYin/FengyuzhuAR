@@ -6,6 +6,7 @@ countries.
 ===============================================================================*/
 
 #import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
@@ -42,6 +43,8 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
 @interface MovieViewController : UIViewController
 
 @property (nonatomic, strong) MPMoviePlayerController* moviePlayer;
+//@property (strong, nonatomic) AVPlayerViewController *moviePlayer;
+
 
 @end
 
@@ -100,7 +103,7 @@ static const float VIDEO_PLAYBACK_CURRENT_POSITION = -1.0f;
     } playerType;
 }
 
-@property (nonatomic, strong) AVURLAsset* asset;
+
 @property (nonatomic, strong) AVPlayer* player;
 
 

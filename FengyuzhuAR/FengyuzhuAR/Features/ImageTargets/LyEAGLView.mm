@@ -292,7 +292,7 @@ namespace {
     
     for (int i = 0; i < kNumImageTargets; ++i)
     {
-        // 遍历每个目标，撞见VideoPlayerHelper对象，并将目标唯独置零
+        // 遍历每个目标，撞创建VideoPlayerHelper对象，并将目标唯独置零
         videoPlayerHelper[i] = [[VideoPlayerHelper alloc] initWithRootViewController:_videoPlaybackViewController];
         videoData[i].targetPositiveDimensions.data[0] = 0.0;
         videoData[i].targetPositiveDimensions.data[1] = 0.0;
@@ -301,7 +301,7 @@ namespace {
 //        videoPlaybackTime[i] = VIDEO_PLAYBACK_CURRENT_POSITION;
         
 //        // 为播放读取本地文件，如果应用进入后台时正在播放则唤醒播放
-//        if (![videoPlayerHelper[i] load:videoNames[i] playImmediately:YES fromPosition:videoPlaybackTime[i]])
+//        if (![videoPlayerHelper[i] load:videoNames[i] playImmediately:YES fromPosition:VIDEO_PLAYBACK_CURRENT_POSITION])
 //        {
 //            NSLog(@"Fialed to load media");
 //        }
@@ -729,6 +729,9 @@ namespace {
             CGPoint center = [self getScreenPointByPose:trackablePose];
             _progressView.center = center;
             
+//            Vuforia::Matrix44F modelViewMatrix = Vuforia::Tool::convertPose2GLMatrix(trackablePose);
+//            [_progressView.layer setTransform:[self CATransform3DFromVuforiaMatrix44:modelViewMatrix]];
+            
             _progressView.progress = loadProgress;
         }
         else
@@ -985,6 +988,32 @@ namespace {
 
 
 
+- (CATransform3D)CATransform3DFromVuforiaMatrix44:(Vuforia::Matrix44F)matrix
+{
+    CATransform3D transform;
+    transform.m11 = matrix.data[0];
+    transform.m12 = matrix.data[1];
+    transform.m13 = matrix.data[2];
+    transform.m14 = matrix.data[3];
+    
+    transform.m21 = matrix.data[4];
+    transform.m22 = matrix.data[5];
+    transform.m23 = matrix.data[6];
+    transform.m24 = matrix.data[7];
+    
+    transform.m31 = matrix.data[8];
+    transform.m32 = matrix.data[9];
+    transform.m33 = matrix.data[10];
+    transform.m34 = matrix.data[11];
+    
+    transform.m41 = matrix.data[12];
+    transform.m42 = matrix.data[13];
+    transform.m43 = matrix.data[14];
+    transform.m44 = matrix.data[15];
+    
+    return transform;
+    
+}
 
 
 #ifdef isNeedRender3DModel_ImageTarget

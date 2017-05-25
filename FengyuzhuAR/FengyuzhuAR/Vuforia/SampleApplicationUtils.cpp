@@ -148,28 +148,6 @@ namespace SampleApplicationUtils
         }
     }
     
-    void
-    jmultiplyMatrix(float *matrixA, float *matrixB, float *matrixC)
-    {
-        int i, j, k;
-        float aTmp[16];
-        
-        for (i = 0; i < 4; i++) {
-            for (j = 0; j < 4; j++) {
-                aTmp[j * 4 + i] = 0.0;
-                
-                for (k = 0; k < 4; k++) {
-                    aTmp[j * 4 + i] += matrixA[k * 4 + i] * matrixB[j * 4 + k];
-                }
-            }
-        }
-        
-        for (i = 0; i < 16; i++) {
-            matrixC[i] = aTmp[i];
-        }
-    }
-    
-    
     
     
     // Initialise a shader

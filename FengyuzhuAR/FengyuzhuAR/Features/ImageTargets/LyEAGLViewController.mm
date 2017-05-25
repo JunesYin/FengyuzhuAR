@@ -26,6 +26,11 @@ static const NSString *ImageTargetDataSetName = @"FengyuzhuAR_MingRenTang_iOS.xm
 
 
 @interface LyEAGLViewController ()  <SampleApplicationControl>
+{
+//    BOOL isLightOn;
+//    UIBarButtonItem *bbiOperLight;
+}
+
 
 @end
 
@@ -95,6 +100,13 @@ static const NSString *ImageTargetDataSetName = @"FengyuzhuAR_MingRenTang_iOS.xm
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     
     self.navigationItem.titleView = imageView;
+    
+    
+//    bbiOperLight = [[UIBarButtonItem alloc] initWithTitle:@"开灯"
+//                                                    style:UIBarButtonItemStyleDone
+//                                                   target:self
+//                                                   action:@selector(takeOperLightFrom)];
+//    self.navigationItem.rightBarButtonItem = bbiOperLight;
     
 }
 
@@ -491,6 +503,29 @@ static const NSString *ImageTargetDataSetName = @"FengyuzhuAR_MingRenTang_iOS.xm
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+//- (void)takeOperLightFrom
+//{
+//    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+//    [device lockForConfiguration:nil];
+//    if (!isLightOn)
+//    {
+//        [device setTorchMode:AVCaptureTorchModeOn];
+//        [device setFlashMode:AVCaptureFlashModeOn];
+//        
+//        [bbiOperLight setTitle:@"关灯"];
+//    }
+//    else
+//    {
+//        [device setTorchMode:AVCaptureTorchModeOff];
+//        [device setFlashMode:AVCaptureFlashModeOff];
+//        
+//        [bbiOperLight setTitle:@"开灯"];
+//    }
+//    [device unlockForConfiguration];
+//    
+//    isLightOn = !isLightOn;
+//}
 
 
 

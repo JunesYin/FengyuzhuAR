@@ -59,7 +59,7 @@ static NSString * const loadProgressKey = @"loadedTimeRanges";
 @property (nonatomic, strong) NSURL* mediaURL;
 @property (nonatomic, strong) AVAssetReader* assetReader;
 @property (nonatomic, strong) AVAssetReaderTrackOutput* assetReaderTrackOutputVideo;
-//@property (nonatomic, strong) AVURLAsset* asset;
+@property (nonatomic, strong) AVURLAsset* asset;
 @property (nonatomic, strong) NSLock* dataLock;
 @property (nonatomic, strong) NSLock* latestSampleBufferLock;
 
@@ -98,6 +98,7 @@ static NSString * const loadProgressKey = @"loadedTimeRanges";
     
     if (nil != self) {
         _moviePlayer = [[MPMoviePlayerController alloc] init];
+//        _moviePlayer = [[AVPlayerViewController alloc] init];
     }
     
     return self;
@@ -114,12 +115,14 @@ static NSString * const loadProgressKey = @"loadedTimeRanges";
 #pragma mark - Autorotation
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskAll;
+//    return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 -(BOOL)shouldAutorotate
 {
-    return YES;
+//    return YES;
+    return NO;
 }
 
 @end
