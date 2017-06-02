@@ -46,6 +46,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setNeedsDisplay];
         [lbText setText:[[NSString alloc] initWithFormat:@"%.0f%%", progress * 100]];
+//        [lbText setText:@"100%"];
         
         if (progress >= 0.999)
         {

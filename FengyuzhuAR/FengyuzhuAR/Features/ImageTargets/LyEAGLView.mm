@@ -636,11 +636,18 @@ namespace {
                                                     videoData[imageIndex].targetPositiveDimensions.data[0],
                                                     modelViewMatrixVideo.data);
             
+//            // 保持宽度
+//            SampleApplicationUtils::scalePoseMatrix(videoData[imageIndex].targetPositiveDimensions.data[0],
+//                                                    videoData[imageIndex].targetPositiveDimensions.data[0] * aspectRatio,
+//                                                    videoData[imageIndex].targetPositiveDimensions.data[0],
+//                                                    modelViewMatrixVideo.data);
+            
 //            // 保持高度
 //            SampleApplicationUtils::scalePoseMatrix(videoData[imageIndex].targetPositiveDimensions.data[1] / aspectRatio,
 //                                                    videoData[imageIndex].targetPositiveDimensions.data[1],
 //                                                    videoData[imageIndex].targetPositiveDimensions.data[0],
 //                                                    modelViewMatrixVideo.data);
+            
             
             SampleApplicationUtils::multiplyMatrix(projectionMatrix.data,
                                                    modelViewMatrixVideo.data,
@@ -712,7 +719,8 @@ namespace {
         float loadProgress = videoPlayerHelper[imageIndex].loadProgress;
         AVPlayerTimeControlStatus playerStatus = videoPlayerHelper[imageIndex].player.timeControlStatus;
         
-        NSLog(@"loadProgress: %.2f      playerStatus: %d", loadProgress, (int)playerStatus);
+//        NSLog(@"loadProgress: %.2f      playerStatus: %d", loadProgress, (int)playerStatus);
+        NSLog(@"imageName: %@-------loadProgress: %.0f%%", targetNames[imageIndex], loadProgress * 100.0);
         
         if (loadProgress < 1.0 && AVPlayerTimeControlStatusPlaying != playerStatus)
         {
